@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/react-git-page/static/css/main.2cce8147.chunk.css",
+    "main.js": "/react-git-page/static/js/main.934009d4.chunk.js",
+    "main.js.map": "/react-git-page/static/js/main.934009d4.chunk.js.map",
+    "runtime~main.js": "/react-git-page/static/js/runtime~main.4fd68763.js",
+    "runtime~main.js.map": "/react-git-page/static/js/runtime~main.4fd68763.js.map",
+    "static/js/2.b41502e9.chunk.js": "/react-git-page/static/js/2.b41502e9.chunk.js",
+    "static/js/2.b41502e9.chunk.js.map": "/react-git-page/static/js/2.b41502e9.chunk.js.map",
+    "index.html": "/react-git-page/index.html",
+    "precache-manifest.d78e52004dfd0061a57f8ff1a91c5a8b.js": "/react-git-page/precache-manifest.d78e52004dfd0061a57f8ff1a91c5a8b.js",
+    "service-worker.js": "/react-git-page/service-worker.js",
+    "static/css/main.2cce8147.chunk.css.map": "/react-git-page/static/css/main.2cce8147.chunk.css.map",
+    "static/media/logo.svg": "/react-git-page/static/media/logo.5d5d9eef.svg"
+  }
+}
