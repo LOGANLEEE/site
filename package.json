@@ -2,8 +2,9 @@
     "name": "site",
     "version": "0.1.0",
     "private": true,
-    "homepage": "https://loganleee.github.io/react-git-page/",
+    "homepage": "https://loganleee.github.io/site/",
     "dependencies": {
+        "@manaflair/redux-batch": "^1.0.0",
         "axios": "^0.19.0",
         "gh-pages": "^2.0.1",
         "primeicons": "^1.0.0",
@@ -13,11 +14,14 @@
         "react-apollo": "^2.5.8",
         "react-dom": "^16.8.6",
         "react-redux": "^7.1.0",
+        "react-router": "^5.0.1",
         "react-router-dom": "^5.0.1",
         "react-scripts": "3.0.1",
         "redux": "^4.0.1",
         "redux-devtools": "^3.5.0",
+        "redux-logger": "^3.0.6",
         "redux-saga": "^1.0.4",
+        "redux-starter-kit": "^0.5.1",
         "styled-components": "^4.3.2"
     },
     "scripts": {
