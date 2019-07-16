@@ -1,28 +1,109 @@
 // import { createReducer } from 'redux-starter-kit';
-import action from './action';
-import * as actionType from './actionType';
-import { CREATE_POST, UPDATE_POST, DELETE_POST } from './actionType';
+import * as Types from './actionType';
 
 const initState = {
-    mowaReducer: 'has called',
+    tabs: ['HOME', 'Favorite', 'TOP100', 'ALLSITE', 'DEV'],
+    dogDrip: [],
+    bullpen: [],
+    ilbe: [],
+    clien: [],
+    isDogDripDone: false,
+    isBullpenDone: false,
+    isIlbeDone: false,
+    isClienDone: false,
 };
+
 export default function mowaReducer(state = initState, action) {
     switch (action.type) {
-        case CREATE_POST: {
+        case Types.CREATE_POST: {
             const { id, title } = action.payload;
             // Omit actual code
             console.info('£££ CREATE_POST CALLED IN REDUCER : ', id, title);
             return { ...state };
         }
-        case UPDATE_POST: {
+
+        case Types.GET_DOGDRIPNET: {
+            const { titleList, linkList } = action.payload;
             // Omit actual code
-            console.info('£££ UPDATE_POST CALLED IN REDUCER');
-            break;
+
+            const dogdrip = [];
+
+            for (let i = 0; i < titleList.length; i++) {
+                dogdrip.push({
+                    from: '개드립',
+                    title: titleList[i],
+                    link: linkList[i],
+                });
+            }
+            return { ...state, dogDrip: dogdrip, isDogDripDone: true };
         }
-        case DELETE_POST: {
+
+        case Types.GET_BULLPEN: {
+            const {
+                titleList,
+                linkList,
+                timeList,
+                authorList,
+            } = action.payload;
             // Omit actual code
-            console.info('£££ DELETE_POST CALLED IN REDUCER');
-            break;
+
+            const data = [];
+
+            for (let i = 0; i < titleList.length; i++) {
+                data.push({
+                    from: 'MLB',
+                    title: titleList[i],
+                    link: linkList[i],
+                    time: timeList[i],
+                    author: authorList[i],
+                });
+            }
+            return { ...state, bullpen: data, isBullpenDone: true };
+        }
+        case Types.GET_ILBE: {
+            const {
+                titleList,
+                linkList,
+                timeList,
+                authorList,
+            } = action.payload;
+            // Omit actual code
+
+            const data = [];
+
+            for (let i = 0; i < titleList.length; i++) {
+                data.push({
+                    from: 'ILBE',
+                    title: titleList[i],
+                    link: linkList[i],
+                    time: timeList[i],
+                    author: authorList[i],
+                });
+            }
+            return { ...state, ilbe: data, isIlbeDone: true };
+        }
+
+        case Types.GET_CLIEN: {
+            const {
+                titleList,
+                linkList,
+                timeList,
+                authorList,
+            } = action.payload;
+            // Omit actual code
+
+            const data = [];
+
+            for (let i = 0; i < titleList.length; i++) {
+                data.push({
+                    from: 'Clien',
+                    title: titleList[i],
+                    link: linkList[i],
+                    time: timeList[i],
+                    author: authorList[i],
+                });
+            }
+            return { ...state, clien: data, isClienDone: true };
         }
 
         default:

@@ -3,13 +3,14 @@ import { reduxBatch } from '@manaflair/redux-batch';
 import logger from 'redux-logger';
 import { configureStore, getDefaultMiddleware } from 'redux-starter-kit';
 import mowaReducer from './containers/Mowa/reducer';
+import init from './service/Init';
 
 const reducer = {
     mowa: mowaReducer,
 };
 
 const middleware = [...getDefaultMiddleware(), logger];
-
+init();
 // const preloadedState = {
 //     todos: [
 //         {
