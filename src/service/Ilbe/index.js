@@ -10,8 +10,7 @@ export default async function fetching() {
     const linkList = [];
     const timeList = [];
     const authorList = [];
-    const url = 'http://www.ilbe.com/list/ilbe';
-
+    const url = '/list/ilbe';
     await axios
         .get(url)
         .then((res) => {
@@ -33,7 +32,7 @@ export default async function fetching() {
             const author = $(target + '> span.global-nick.nick > a').text();
             titleList.push(title);
             authorList.push(author);
-            linkList.push('www.ilbe.com' + link);
+            linkList.push('https://www.ilbe.com' + link);
             timeList.push(time);
         }
     }

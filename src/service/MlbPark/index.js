@@ -10,9 +10,7 @@ export default async function fetching() {
     const linkList = [];
     const timeList = [];
     const authorList = [];
-    const url =
-        'http://mlbpark.donga.com/mp/b.php?p=1&m=list&b=bullpen&query=&select=&user=';
-
+    const url = '/mp/b.php?p=1&m=list&b=bullpen&query=&select=&user=';
     await axios
         .get(url)
         .then((res) => {
@@ -40,6 +38,8 @@ export default async function fetching() {
             authorList.push(author);
         }
     }
-    store.dispatch(action.getBullPen(titleList, linkList, timeList,authorList));
+    store.dispatch(
+        action.getBullPen(titleList, linkList, timeList, authorList),
+    );
     return true;
 }

@@ -1,9 +1,20 @@
 import React from 'react';
+import moment from 'moment';
+
 import Wrapper from './Wrapper';
 
 const info = console.info;
 
 function renderList(nodes) {
+    nodes.sort(function(a, b) {
+        // Turn your strings into dates, and then subtract them
+        // to get a value that is either negative, positive, or zero.
+        a.time = moment().format(a.time);
+        b.time = moment().format(b.time);
+
+        return a.time - b.time;
+    });
+
     return nodes.map((node, idx) => {
         return (
             <li key={idx}>

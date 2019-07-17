@@ -10,8 +10,7 @@ export default async function fetching() {
     const linkList = [];
     const timeList = [];
     const authorist = [];
-    const url = 'https://www.clien.net/service/board/park';
-
+    const url = '/service/board/park';
     await axios
         .get(url)
         .then((res) => {

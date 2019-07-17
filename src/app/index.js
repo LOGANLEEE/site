@@ -8,8 +8,8 @@ function App() {
     return (
         <Router>
             <div>
-                <Route path='*' exact component={Mowa} />
-                <Route exact path='/main/' component={Main} />
+                <Route path='*' exact  component={Mowa}  />
+                <Route exact path='/main' component={Main} />
                 {/* <Route path='/users/' component={Users} /> */}
             </div>
         </Router>
