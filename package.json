@@ -5,7 +5,7 @@
     "homepage": "https://loganleee.github.io/site/",
     "dependencies": {
         "@manaflair/redux-batch": "^1.0.0",
-        "axios": "^0.19.0",
+        "axios": "^0.21.1",
         "gh-pages": "^2.0.1",
         "primeicons": "^1.0.0",
         "primereact": "^3.1.7",
